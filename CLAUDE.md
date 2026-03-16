@@ -13,18 +13,28 @@ digital-mons/
 ├── next.config.ts             # Next.js configuration
 ├── postcss.config.mjs         # PostCSS config (Tailwind CSS v4)
 ├── eslint.config.mjs          # ESLint flat config
-├── public/                    # Static assets
+├── public/                    # Static assets (mon sprites go in /mons/)
 └── src/
     ├── app/                   # Next.js App Router
     │   ├── layout.tsx         # Root layout (dark mode enabled)
-    │   ├── page.tsx           # Home page
-    │   └── globals.css        # Global styles, CSS variables, theme
+    │   ├── page.tsx           # Landing page with link to Dex
+    │   ├── globals.css        # Global styles, CSS variables, theme
+    │   └── dex/
+    │       ├── page.tsx       # Dex list — mobile-first grid of all mons
+    │       └── [id]/
+    │           └── page.tsx   # Mon detail — full profile, stats, evolution chain
     ├── components/
-    │   └── ui/                # shadcn/ui components
-    │       ├── button.tsx     # Button (variants: default, destructive, outline, secondary, ghost, link)
-    │       └── card.tsx       # Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter
+    │   ├── ui/                # shadcn/ui primitives
+    │   │   ├── button.tsx     # Button (variants: default, destructive, outline, secondary, ghost, link)
+    │   │   └── card.tsx       # Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter
+    │   ├── element-badge.tsx  # Colored badge for element types
+    │   └── mon-card.tsx       # Monster card used in the Dex grid
+    ├── data/
+    │   └── mons.ts            # All monster seed data + helper functions (getMonById, getEvolutionChain, etc.)
     ├── hooks/                 # Custom React hooks
     └── lib/
+        ├── types.ts           # Core types: Mon, MonStats, MonAbility, EvolutionChain, enums
+        ├── element-colors.ts  # Tailwind color maps per element type (bg, text, border) + rarity colors
         └── utils.ts           # cn() utility (clsx + tailwind-merge)
 ```
 
@@ -43,6 +53,39 @@ digital-mons/
 - **Primary Color**: Green / lime — `oklch(0.72 0.19 142)`
 - **Border Radius**: `0.5rem` (via `--radius` CSS variable)
 - **Aesthetic**: Clean & minimal
+
+## Monster Dex System
+
+### Evolution Stages (6, linear)
+
+| # | Stage Name | Description                    |
+|---|------------|--------------------------------|
+| 1 | **Spark**  | Newborn digital essence        |
+| 2 | **Sprout** | Early form taking shape        |
+| 3 | **Strike** | Battle-ready juvenile          |
+| 4 | **Surge**  | Powerful adult form            |
+| 5 | **Apex**   | Peak evolution                 |
+| 6 | **Omega**  | Transcendent final form        |
+
+### Element Types (12)
+
+Fire, Water, Earth, Wind, Lightning, Ice, Light, Shadow, Metal, Nature, Poison, Psychic
+
+- Mons can be **single or dual-typed**.
+
+### Rarity Tiers (6)
+
+Common, Uncommon, Rare, Epic, Legendary, Mythic
+
+### Mon Data Model
+
+Each mon has: `id`, `dexNumber`, `name`, `types` (1-2), `stage`, `rarity`, `description`, `lore`, `habitat`, `stats` (hp/attack/defense/speed/special), `abilities[]` (name/description/element), `evolvesFrom`, `evolvesInto`, `image`.
+
+### Current Mon Count: 18
+
+- **Pyrox Line** (#001-006): Cindlet → Blazpup → Pyrox → Volcanox → Ignirex → Soldracon (Fire → Fire/Earth → Fire/Light)
+- **Aquara Line** (#007-012): Drople → Tidalin → Aquara → Tsunamaw → Abysseon → Leviathos (Water → Water/Shadow → Water/Psychic)
+- **Voltik Line** (#013-018): Zapbit → Voltik → Thundrix → Galvorn → Tempesteel → Thorathon (Lightning → Lightning/Wind → Lightning/Metal → Lightning/Light)
 
 ## Commands
 
@@ -64,6 +107,9 @@ digital-mons/
 - Use `cn()` from `@/lib/utils` for conditional class merging.
 - Use CSS variables defined in `globals.css` for all theme colors — never hardcode colors.
 - Add new shadcn/ui components to `src/components/ui/` manually (registry access may be unavailable).
+- All mon data lives in `src/data/mons.ts`. Use the helper functions (`getMonById`, `getEvolutionChain`, `getMonsByStage`) to query data.
+- Element color mappings are centralized in `src/lib/element-colors.ts`.
+- Mon detail pages are statically generated via `generateStaticParams`.
 
 ## Key Dependencies
 
