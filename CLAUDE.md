@@ -81,11 +81,13 @@ Common, Uncommon, Rare, Epic, Legendary, Mythic
 
 Each mon has: `id`, `dexNumber`, `name`, `types` (1-2), `stage`, `rarity`, `description`, `lore`, `habitat`, `stats` (hp/attack/defense/speed/special), `abilities[]` (name/description/element), `evolvesFrom`, `evolvesInto`, `image`.
 
-### Current Mon Count: 18
+### Current Mon Count: 30
 
 - **Pyrox Line** (#001-006): Cindlet → Blazpup → Pyrox → Volcanox → Ignirex → Soldracon (Fire → Fire/Earth → Fire/Light)
 - **Aquara Line** (#007-012): Drople → Tidalin → Aquara → Tsunamaw → Abysseon → Leviathos (Water → Water/Shadow → Water/Psychic)
 - **Voltik Line** (#013-018): Zapbit → Voltik → Thundrix → Galvorn → Tempesteel → Thorathon (Lightning → Lightning/Wind → Lightning/Metal → Lightning/Light)
+- **Florae Line** (#019-024): Seedbit → Thornlet → Florae → Vengrove → Blightwood → Yggdracore (Nature → Nature/Poison → Nature/Shadow → Nature/Light)
+- **Glacien Line** (#025-030): Frozzle → Sleetpaw → Glacien → Permafrost → Cryomancer → Absolutzero (Ice → Ice/Wind → Ice/Earth → Ice/Psychic → Ice/Shadow)
 
 ## Commands
 
