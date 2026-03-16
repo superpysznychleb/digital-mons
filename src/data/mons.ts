@@ -20,6 +20,7 @@ const pyroxLine: Mon[] = [
     evolvesFrom: null,
     evolvesInto: "pyrox-sprout",
     image: "/mons/cindlet.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, tiny round ember spirit creature, translucent orange-red glowing body, small flickering flame on top of its head, two dot eyes glowing white, wispy trailing flame tail, floating slightly above ground, dark background with faint heat shimmer, cute minimal design, warm color palette of orange amber and red, clean pixel edges, digital monster creature design",
   },
   {
     id: "pyrox-sprout",
@@ -39,6 +40,7 @@ const pyroxLine: Mon[] = [
     evolvesFrom: "pyrox-spark",
     evolvesInto: "pyrox-strike",
     image: "/mons/blazpup.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, small playful fire puppy creature, bright orange fur with red flame markings, pointed ears with flame tips, bushy tail made of living fire, four stubby legs in running pose, cheerful expression with bright eyes, small ember particles trailing behind, dark background, warm palette of orange red and yellow, cute proportions with oversized head, clean pixel art style, digital monster creature design",
   },
   {
     id: "pyrox-strike",
@@ -58,6 +60,7 @@ const pyroxLine: Mon[] = [
     evolvesFrom: "pyrox-sprout",
     evolvesInto: "pyrox-surge",
     image: "/mons/pyrox.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, fierce quadrupedal fire beast, muscular body with deep crimson red fur, large flowing mane made entirely of bright flames, sharp fangs visible in snarling mouth, intense glowing amber eyes, clawed paws leaving scorch marks, flame wisps rising from back and shoulders, aggressive battle stance, dark background with heat distortion, palette of deep red crimson orange and white-hot yellow, medium creature proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "pyrox-surge",
@@ -78,6 +81,7 @@ const pyroxLine: Mon[] = [
     evolvesFrom: "pyrox-strike",
     evolvesInto: "pyrox-apex",
     image: "/mons/volcanox.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, hulking volcanic beast, massive quadrupedal body covered in cracked dark volcanic rock armor, glowing orange-red magma visible through cracks in the stone, heavy rocky shoulders and back plates, molten lava dripping from jaws, ember eyes glowing beneath stone brow ridge, ground cracking beneath heavy feet, small eruptions of lava from back, dark background with magma glow, palette of dark grey basalt orange magma and red flame, heavy imposing proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "pyrox-apex",
@@ -98,6 +102,7 @@ const pyroxLine: Mon[] = [
     evolvesFrom: "pyrox-surge",
     evolvesInto: "pyrox-omega",
     image: "/mons/ignirex.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, regal volcanic titan standing bipedal, towering muscular frame armored in obsidian and basalt plates, crown of perpetual fire burning atop its head, molten veins of lava running across entire body, massive clawed hands wreathed in flame, regal commanding pose with one arm raised, rivers of magma pooling at feet, volcanic eruption particles in background, dark background with intense orange glow, palette of black obsidian glowing orange bright yellow and white-hot core, majestic imposing proportions, highly detailed pixel art style, digital monster creature design",
   },
   {
     id: "pyrox-omega",
@@ -118,6 +123,7 @@ const pyroxLine: Mon[] = [
     evolvesFrom: "pyrox-apex",
     evolvesInto: null,
     image: "/mons/soldracon.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, transcendent solar dragon deity, enormous serpentine dragon body radiating pure golden-white light, wings made of solar flares and plasma, scales shifting between molten gold and blinding white, long flowing mane of concentrated sunfire, eyes like twin stars burning with divine intensity, solar corona halo behind its head, celestial particles and light rays emanating outward, floating in cosmic void background with stars, palette of white gold solar yellow blazing orange and divine light, godlike ethereal proportions, masterwork highly detailed pixel art style, digital monster creature design, legendary aura",
   },
 ];
 
@@ -141,6 +147,7 @@ const aquaraLine: Mon[] = [
     evolvesFrom: null,
     evolvesInto: "aquara-sprout",
     image: "/mons/drople.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, tiny sentient water droplet creature, round teardrop-shaped translucent blue body, rippling surface texture, two small shiny dot eyes, small happy expression, tiny stubby arms made of water, bouncing pose with small splash beneath, water particles floating around it, dark background with blue ambient glow, palette of cerulean blue aqua cyan and white highlights, cute minimal proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "aquara-sprout",
@@ -160,6 +167,7 @@ const aquaraLine: Mon[] = [
     evolvesFrom: "aquara-spark",
     evolvesInto: "aquara-strike",
     image: "/mons/tidalin.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, small aquatic fish-like creature, sleek elongated blue body with translucent fin-like data tendrils flowing from head and tail, smooth streamlined shape, bright curious eyes, small whisker-like antennae made of flowing water, graceful swimming pose, faint current lines around body suggesting motion, dark background with underwater blue glow, palette of ocean blue teal cyan and white water highlights, cute elegant proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "aquara-strike",
@@ -179,6 +187,7 @@ const aquaraLine: Mon[] = [
     evolvesFrom: "aquara-sprout",
     evolvesInto: "aquara-surge",
     image: "/mons/aquara.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, swift elegant water serpent, long sinuous body of deep sapphire blue, sleek hydrodynamic scales, sharp intelligent eyes with a predatory gleam, flowing fins like ribbons of pressurized water along its spine, coiled strike-ready pose with head raised, water jets trailing from tail, swirling current vortex around body, dark aquatic background, palette of deep blue sapphire teal and white water spray, agile predatory proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "aquara-surge",
@@ -199,6 +208,7 @@ const aquaraLine: Mon[] = [
     evolvesFrom: "aquara-strike",
     evolvesInto: "aquara-apex",
     image: "/mons/tsunamaw.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, massive deep-sea leviathan, thick serpentine body of dark navy blue fading to black, bioluminescent markings along flanks glowing faint purple, enormous gaping jaws with rows of sharp teeth, small menacing eyes glowing deep violet, dark shadowy aura emanating from body, tattered fin membranes like shadows underwater, crushing water pressure visible as warped pixels around it, pitch black abyssal background with faint bioluminescence, palette of dark navy black deep purple and eerie blue glow, heavy menacing proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "aquara-apex",
@@ -219,6 +229,7 @@ const aquaraLine: Mon[] = [
     evolvesFrom: "aquara-surge",
     evolvesInto: "aquara-omega",
     image: "/mons/abysseon.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, colossal abyssal sea king, massive armored body of black and midnight blue, crown-like crest of dark crystallized water atop head, multiple glowing purple eyes in rows, enormous clawed flippers trailing shadow tendrils, whirlpool vortex swirling beneath it, corrupted data fragments dissolving in its wake, dark void-like aura distorting space around it, pitch black background with deep purple void energy, palette of black midnight blue deep purple and ghostly cyan accents, titanic regal proportions, highly detailed pixel art style, digital monster creature design",
   },
   {
     id: "aquara-omega",
@@ -239,6 +250,7 @@ const aquaraLine: Mon[] = [
     evolvesFrom: "aquara-apex",
     evolvesInto: null,
     image: "/mons/leviathos.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, cosmic ocean deity, immense ethereal whale-serpent hybrid body of translucent luminous blue, body partially phasing in and out of reality with transparent pixel sections, third eye on forehead glowing brilliant psychic pink, flowing tendrils of pure thought-water extending outward like cosmic ribbons, constellations and stars visible through its translucent body, tidal waves orbiting it in rings, serene omniscient expression, cosmic void background with nebula colors, palette of luminous blue psychic pink cosmic purple and starlight white, transcendent divine proportions, masterwork highly detailed pixel art style, digital monster creature design, legendary aura",
   },
 ];
 
@@ -262,6 +274,7 @@ const voltikLine: Mon[] = [
     evolvesFrom: null,
     evolvesInto: "voltik-sprout",
     image: "/mons/zapbit.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, tiny living electricity spark creature, small jagged body made of crackling yellow-white energy, zigzag shape like a lightning bolt with two bright dot eyes, tiny sparking arms, static electricity arcing off its body in small pixel bolts, vibrating energetic pose, faint electric glow surrounding it, dark background with circuit board pattern faintly visible, palette of bright yellow electric white and blue-white spark, cute hyperactive proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "voltik-sprout",
@@ -281,6 +294,7 @@ const voltikLine: Mon[] = [
     evolvesFrom: "voltik-spark",
     evolvesInto: "voltik-strike",
     image: "/mons/voltik.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, crackling electric insectoid creature, beetle-like body of bright yellow with black lightning stripe markings, six segmented legs crackling with static, two long antennae arcing electricity between their tips, compound eyes glowing electric blue, small wings buzzing with voltage, skittering pose on a surface, electric arcs connecting to ground, dark background with power grid lines, palette of bright yellow electric blue black and white spark, energetic insect proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "voltik-strike",
@@ -300,6 +314,7 @@ const voltikLine: Mon[] = [
     evolvesFrom: "voltik-sprout",
     evolvesInto: "voltik-surge",
     image: "/mons/thundrix.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, fierce storm hawk bird of prey, sleek aerodynamic body with electric yellow and storm grey feathers, sharp hooked beak crackling with electricity, wings spread wide trailing lightning bolts and wind currents, piercing electric blue eyes, talons sparking with voltage, diving attack pose from above, storm clouds and wind streaks in background, dark stormy background with lightning flashes, palette of electric yellow storm grey blue-white lightning and dark cloud, swift predatory bird proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "voltik-surge",
@@ -320,6 +335,7 @@ const voltikLine: Mon[] = [
     evolvesFrom: "voltik-strike",
     evolvesInto: "voltik-apex",
     image: "/mons/galvorn.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, armored thunder beast, powerful quadrupedal body covered in chrome and gunmetal exoskeleton plates, electricity arcing between metal segments, glowing yellow energy core visible in chest, heavy metallic claws, horn-like lightning rods on head channeling electricity upward, electromagnetic field visible as pixel distortion around body, sparks flying from joints, dark industrial background with metal structures, palette of chrome silver gunmetal electric yellow and blue-white voltage, heavy armored proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "voltik-apex",
@@ -340,6 +356,7 @@ const voltikLine: Mon[] = [
     evolvesFrom: "voltik-surge",
     evolvesInto: "voltik-omega",
     image: "/mons/tempesteel.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, colossal bipedal war machine, towering mechanical humanoid body of dark steel and titanium plating, massive cannon-like arms crackling with contained lightning, glowing reactor core in torso pulsing yellow-white, heavy armored legs with hydraulic pistons, shoulder-mounted Tesla coils arcing electricity into the sky, visor-like eyes glowing intense electric blue, metal debris and sparks orbiting it magnetically, dark industrial citadel background with lightning strikes, palette of dark steel titanium intense yellow electric blue and white-hot energy, imposing mechanical proportions, highly detailed pixel art style, digital monster creature design",
   },
   {
     id: "voltik-omega",
@@ -360,6 +377,7 @@ const voltikLine: Mon[] = [
     evolvesFrom: "voltik-apex",
     evolvesInto: null,
     image: "/mons/thorathon.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, divine storm god entity, humanoid figure made entirely of living lightning and divine light, no solid body — pure electromagnetic energy in a vaguely humanoid shape, face of pure white light with two blazing golden eyes, crown of perpetual lightning bolts, arms outstretched commanding infinite storm energy, massive lightning wings spanning outward, reality distorting and pixelating around its form, eternal storm clouds swirling in background, divine light rays piercing through, palette of blinding white divine gold electric yellow and deep storm purple, godlike ethereal proportions, masterwork highly detailed pixel art style, digital monster creature design, mythic divine aura",
   },
 ];
 
@@ -383,6 +401,7 @@ const floraeLine: Mon[] = [
     evolvesFrom: null,
     evolvesInto: "florae-sprout",
     image: "/mons/seedbit.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, tiny floating seed pod creature, round acorn-shaped body of soft brown and green, small leaf wings keeping it aloft, two sleepy half-closed dot eyes, single tiny root dangling below like a tail, faint green pollen particles drifting around it, gentle floating pose, dark background with faint overgrown foliage hints, palette of earthy brown soft green leaf green and pale yellow, cute minimal sleepy proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "florae-sprout",
@@ -402,6 +421,7 @@ const floraeLine: Mon[] = [
     evolvesFrom: "florae-spark",
     evolvesInto: "florae-strike",
     image: "/mons/thornlet.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, small thorny sapling creature, stout tree-stump body of brown bark with green moss patches, sharp thorns protruding from shoulders and head, two large curious round eyes blinking, small branch-like arms with leaf hands, stubby root feet planted firmly, bristling defensive pose with thorns extended, small leaves sprouting from top of head, dark background with overgrown data vines, palette of bark brown moss green thorn grey and bright leaf green, cute sturdy proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "florae-strike",
@@ -421,6 +441,7 @@ const floraeLine: Mon[] = [
     evolvesFrom: "florae-sprout",
     evolvesInto: "florae-surge",
     image: "/mons/florae.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, venomous flower beast, bipedal plant creature with a large toxic flower blooming from its head in vivid purple and sickly green, thorny vine arms that whip and grab, body of twisted green stems and bark, dripping toxic sap from flower petals, hypnotic patterned eyes, toxic purple pollen cloud drifting from flower, predatory lurking pose, dark background with corrupted overgrown data vines, palette of deep green toxic purple sickly yellow-green and venomous magenta, sinister elegant proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "florae-surge",
@@ -441,6 +462,7 @@ const floraeLine: Mon[] = [
     evolvesFrom: "florae-strike",
     evolvesInto: "florae-apex",
     image: "/mons/vengrove.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, massive toxic mangrove tree creature, wide gnarled trunk body with twisted roots spreading in all directions, canopy of dark poisonous leaves dripping toxic sap, multiple hollow knot-hole eyes glowing sickly green, thick root tentacles emerging from ground, toxic miasma cloud surrounding base, mushrooms and corrupted growths on bark, swamp water pooling around roots, dark swampy background with toxic fog, palette of dark bark brown toxic green purple miasma and sickly yellow glow, massive rooted immovable proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "florae-apex",
@@ -461,6 +483,7 @@ const floraeLine: Mon[] = [
     evolvesFrom: "florae-surge",
     evolvesInto: "florae-omega",
     image: "/mons/blightwood.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, cursed ancient tree entity, towering dead tree body of blackened charred wood, hollow trunk revealing a core of swirling shadow energy, gnarled branches reaching outward like grasping claws, single massive eye in the trunk hollow glowing deep purple, shadow tendrils erupting from roots and spreading across ground, withered leaves of dark purple and black drifting around it, light being visibly absorbed and dimming near its body, dark oppressive background with dead forest silhouettes, palette of charcoal black dead wood grey deep purple and faint ghostly green, towering menacing proportions, highly detailed pixel art style, digital monster creature design",
   },
   {
     id: "florae-omega",
@@ -481,6 +504,7 @@ const floraeLine: Mon[] = [
     evolvesFrom: "florae-apex",
     evolvesInto: null,
     image: "/mons/yggdracore.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, divine World Tree colossus, immense sacred tree with a trunk of living golden bark, canopy of radiant luminous leaves glowing white and green, roots extending downward into infinite digital dimensions, face formed in the bark — serene wise expression with eyes of pure golden light, flowers of pure light blooming across branches, data streams flowing upward through trunk like sap of light, celestial particles and sacred geometry patterns in the canopy, cosmic garden background with stars and nebulae visible through branches, palette of golden bark radiant white sacred green and divine gold, transcendent colossal proportions, masterwork highly detailed pixel art style, digital monster creature design, mythic divine aura",
   },
 ];
 
@@ -504,6 +528,7 @@ const glacienLine: Mon[] = [
     evolvesFrom: null,
     evolvesInto: "glacien-sprout",
     image: "/mons/frozzle.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, tiny shivering ice crystal creature, geometric hexagonal body made of translucent pale blue ice, small face with two round eyes visible inside the crystal, tiny crystalline legs, vibrating shivering animation pose, frost particles emanating outward, small snowflakes forming around it, dark background with cool blue ambient frost glow, palette of pale ice blue crystal white frosty cyan and transparent highlights, cute geometric minimal proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "glacien-sprout",
@@ -523,6 +548,7 @@ const glacienLine: Mon[] = [
     evolvesFrom: "glacien-spark",
     evolvesInto: "glacien-strike",
     image: "/mons/sleetpaw.png",
+    imagePrompt: "Strampler pixel art, 64x64 sprite, nimble ice fox creature, small sleek body of pale white-blue fur with ice crystal patterns, large fluffy tail tipped with frost crystals, pointed ears with icicle tips, bright alert cyan eyes, four dainty paws leaving frost trails, sliding graceful pose on an ice surface, frost particles trailing behind, dark background with frozen data corridor elements, palette of white-blue pale frost icy cyan and crystal clear highlights, cute agile fox proportions, clean pixel art style, digital monster creature design",
   },
   {
     id: "glacien-strike",
@@ -542,6 +568,7 @@ const glacienLine: Mon[] = [
     evolvesFrom: "glacien-sprout",
     evolvesInto: "glacien-surge",
     image: "/mons/glacien.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, elegant ice wolf, powerful lupine body of crystalline white-blue fur, ice armor plates on shoulders and spine, sharp icicle-like fur ridges along back, howling pose with head raised to sky, blizzard winds swirling around body, frost breath visible in the cold air, piercing pale blue intelligent eyes, paws wreathed in swirling snow, frozen tundra ground beneath, dark blizzard background with driving snow, palette of ice white crystalline blue pale silver and blizzard grey, noble predator wolf proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "glacien-surge",
@@ -562,6 +589,7 @@ const glacienLine: Mon[] = [
     evolvesFrom: "glacien-strike",
     evolvesInto: "glacien-apex",
     image: "/mons/permafrost.png",
+    imagePrompt: "Strampler pixel art, 96x96 sprite, towering ice golem, massive humanoid body of layered ancient ice and frozen bedrock, thick glacier-blue ice armor with embedded stones and frozen dirt, heavy square fists of solid permafrost, small glowing ice-blue eyes deep within a craggy head, icicles hanging from arms and jaw like a frozen beard, cracks in body revealing deep blue ancient ice core, frozen ground cracking beneath massive feet, dark frozen landscape background, palette of glacier blue frozen grey ancient ice deep blue and frosty white, massive immovable golem proportions, detailed pixel art style, digital monster creature design",
   },
   {
     id: "glacien-apex",
@@ -582,6 +610,7 @@ const glacienLine: Mon[] = [
     evolvesFrom: "glacien-surge",
     evolvesInto: "glacien-omega",
     image: "/mons/cryomancer.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, floating ice sage entity, elegant robed humanoid figure made of crystalline ice, hovering above ground in meditative pose, ornate ice crystal crown, flowing robes of frozen mist and psychic energy in pale blue and soft pink, hands outstretched with intricate ice constructs forming between them — a sword a shield geometric shapes, third eye on forehead glowing psychic pink, ice crystal mandala rotating behind like a halo, frozen spire architecture faintly visible in background, palette of crystal ice blue psychic pink pale lavender and pristine white, elegant mystical floating proportions, highly detailed pixel art style, digital monster creature design",
   },
   {
     id: "glacien-omega",
@@ -602,6 +631,7 @@ const glacienLine: Mon[] = [
     evolvesFrom: "glacien-apex",
     evolvesInto: null,
     image: "/mons/absolutzero.png",
+    imagePrompt: "Strampler pixel art, 128x128 sprite, void entropy entity, tall gaunt humanoid figure of absolute black ice and frozen shadow, body appears to absorb all light and color around it, silhouette edges flickering between solid and void, two eyes of empty pale white like frozen stars, crown of inverted icicles pointing downward defying gravity, reality visibly freezing and cracking in pixels around its form, all color draining from nearby space leaving greyscale, time distortion effect with staggered duplicate frames, void background of pure stillness with frozen data particles suspended motionless, palette of void black dark ice blue deathly pale white and entropy grey, haunting still otherworldly proportions, masterwork highly detailed pixel art style, digital monster creature design, legendary void aura",
   },
 ];
 

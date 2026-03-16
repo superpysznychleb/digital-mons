@@ -79,7 +79,18 @@ Common, Uncommon, Rare, Epic, Legendary, Mythic
 
 ### Mon Data Model
 
-Each mon has: `id`, `dexNumber`, `name`, `types` (1-2), `stage`, `rarity`, `description`, `lore`, `habitat`, `stats` (hp/attack/defense/speed/special), `abilities[]` (name/description/element), `evolvesFrom`, `evolvesInto`, `image`.
+Each mon has: `id`, `dexNumber`, `name`, `types` (1-2), `stage`, `rarity`, `description`, `lore`, `habitat`, `stats` (hp/attack/defense/speed/special), `abilities[]` (name/description/element), `evolvesFrom`, `evolvesInto`, `image`, `imagePrompt`.
+
+### Image Generation Prompts
+
+Every mon includes an `imagePrompt` field — a detailed Strampler pixel art generation prompt for AI image tools. Prompt conventions:
+
+- **Style prefix**: Always starts with `"Strampler pixel art"`
+- **Resolution**: `64x64` for Spark/Sprout stages, `96x96` for Strike/Surge, `128x128` for Apex/Omega
+- **Structure**: Style → resolution → creature description → body/colors → pose → background → palette → proportions → suffix
+- **Suffix**: Always ends with `"digital monster creature design"` (+ `"legendary aura"` / `"mythic divine aura"` for Legendary/Mythic)
+- **Palette**: Each prompt includes an explicit color palette matching the mon's element types
+- **Progression**: Prompts scale in detail and grandeur matching evolution stage — Spark is cute/minimal, Omega is godlike/transcendent
 
 ### Current Mon Count: 30
 

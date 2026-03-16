@@ -69,6 +69,8 @@ export interface Mon {
   evolvesInto: string | null;
   /** URL or path to the mon's image/sprite */
   image: string;
+  /** AI prompt for generating a Strampler pixel art sprite */
+  imagePrompt: string;
 }
 
 /** A full linear evolution chain */
