@@ -51,11 +51,7 @@ export default async function MonDetailPage({ params }: { params: Promise<{ id: 
         )}
       >
         {/* Sprite placeholder */}
-        <div className="mb-4 flex aspect-square max-h-48 w-full items-center justify-center rounded-[var(--radius)] bg-muted">
-          <span className="text-5xl text-muted-foreground opacity-30 select-none">
-            #{String(mon.dexNumber).padStart(3, "0")}
-          </span>
-        </div>
+        <div className="mb-4 flex aspect-square max-h-48 w-full items-center justify-center rounded-[var(--radius)] bg-muted" />
 
         {/* Name row */}
         <div className="mb-2 flex items-center justify-between">

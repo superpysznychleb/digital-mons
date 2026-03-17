@@ -14,11 +14,7 @@ export function MonCard({ mon }: { mon: Mon }) {
         )}
       >
         {/* Placeholder sprite area */}
-        <div className="mb-2 flex aspect-square items-center justify-center rounded-[var(--radius)] bg-muted text-3xl">
-          <span className="text-muted-foreground opacity-40 select-none">
-            #{String(mon.dexNumber).padStart(3, "0")}
-          </span>
-        </div>
+        <div className="mb-2 flex aspect-square items-center justify-center rounded-[var(--radius)] bg-muted" />
 
         {/* Name and number */}
         <div className="mb-1 flex items-center justify-between">
