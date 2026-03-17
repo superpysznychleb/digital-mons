@@ -19,22 +19,28 @@ digital-mons/
     │   ├── layout.tsx         # Root layout (dark mode enabled)
     │   ├── page.tsx           # Landing page with link to Dex
     │   ├── globals.css        # Global styles, CSS variables, theme
+    │   ├── api/
+    │   │   └── upload-mon-image/
+    │   │       └── route.ts   # POST endpoint — accepts image, converts to WebP, saves to public/mons/
     │   └── dex/
     │       ├── page.tsx       # Dex list — mobile-first grid of all mons
     │       └── [id]/
-    │           └── page.tsx   # Mon detail — full profile, stats, evolution chain
+    │           └── page.tsx   # Mon detail — full profile, stats, evolution chain, image upload
     ├── components/
     │   ├── ui/                # shadcn/ui primitives
     │   │   ├── button.tsx     # Button (variants: default, destructive, outline, secondary, ghost, link)
     │   │   └── card.tsx       # Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter
+    │   ├── copy-button.tsx    # Clipboard copy button (client component)
     │   ├── element-badge.tsx  # Colored badge for element types
-    │   └── mon-card.tsx       # Monster card used in the Dex grid
+    │   ├── mon-card.tsx       # Monster card used in the Dex grid
+    │   └── mon-image-upload.tsx # Image upload with WebP conversion (client component)
     ├── data/
     │   └── mons.ts            # All monster seed data + helper functions (getMonById, getEvolutionChain, etc.)
     ├── hooks/                 # Custom React hooks
     └── lib/
         ├── types.ts           # Core types: Mon, MonStats, MonAbility, EvolutionChain, enums
         ├── element-colors.ts  # Tailwind color maps per element type (bg, text, border) + rarity colors
+        ├── convert-to-webp.ts # WebP conversion utility (sharp-based, server-only)
         └── utils.ts           # cn() utility (clsx + tailwind-merge)
 ```
 
@@ -128,6 +134,7 @@ Every mon includes an `imagePrompt` field — a detailed Strampler pixel art gen
 - All mon data lives in `src/data/mons.ts`. Use the helper functions (`getMonById`, `getEvolutionChain`, `getMonsByStage`) to query data.
 - Element color mappings are centralized in `src/lib/element-colors.ts`.
 - Mon detail pages are statically generated via `generateStaticParams`.
+- **All mon images MUST be stored as WebP.** Any uploaded image is automatically converted to WebP via `convertToWebp()` in `src/lib/convert-to-webp.ts`. Never save mon images in PNG, JPEG, or any other format — always convert first. Uploaded images are saved to `public/mons/{mon-id}.webp`.
 
 ## Key Dependencies
 
@@ -138,6 +145,7 @@ Every mon includes an `imagePrompt` field — a detailed Strampler pixel art gen
 | `tailwind-merge`           | Tailwind class deduplication     |
 | `lucide-react`             | Icon library                     |
 | `@radix-ui/react-slot`     | Polymorphic component support    |
+| `sharp`                    | Server-side image conversion to WebP |
 
 ## References
 

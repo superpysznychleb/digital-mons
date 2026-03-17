@@ -6,6 +6,7 @@ import { RARITY_COLORS, ELEMENT_BORDER } from "@/lib/element-colors";
 import { cn } from "@/lib/utils";
 import { EVOLUTION_STAGES } from "@/lib/types";
 import { CopyButton } from "@/components/copy-button";
+import { MonImageUpload } from "@/components/mon-image-upload";
 
 export function generateStaticParams() {
   return ALL_MONS.map((mon) => ({ id: mon.id }));
@@ -51,8 +52,8 @@ export default async function MonDetailPage({ params }: { params: Promise<{ id: 
           ELEMENT_BORDER[mon.types[0]]
         )}
       >
-        {/* Sprite placeholder */}
-        <div className="mb-4 flex aspect-square max-h-48 w-full items-center justify-center rounded-[var(--radius)] bg-muted" />
+        {/* Mon sprite with upload */}
+        <MonImageUpload monId={mon.id} currentImage={mon.image || `/mons/${mon.id}.webp`} />
 
         {/* Name row */}
         <div className="mb-2 flex items-center justify-between">
