@@ -5,6 +5,7 @@ import { ElementBadge } from "@/components/element-badge";
 import { RARITY_COLORS, ELEMENT_BORDER } from "@/lib/element-colors";
 import { cn } from "@/lib/utils";
 import { EVOLUTION_STAGES } from "@/lib/types";
+import { CopyButton } from "@/components/copy-button";
 
 export function generateStaticParams() {
   return ALL_MONS.map((mon) => ({ id: mon.id }));
@@ -127,7 +128,10 @@ export default async function MonDetailPage({ params }: { params: Promise<{ id: 
 
       {/* Image Prompt */}
       <section className="mb-6">
-        <h2 className="mb-3 text-lg font-bold">Image Prompt</h2>
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-lg font-bold">Image Prompt</h2>
+          <CopyButton text={mon.imagePrompt} />
+        </div>
         <div className="rounded-[var(--radius)] border bg-card p-4">
           <p className="text-xs leading-relaxed text-muted-foreground font-mono break-words">
             {mon.imagePrompt}
