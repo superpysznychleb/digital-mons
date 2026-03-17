@@ -8,6 +8,7 @@ export function MonImageUpload({ monId, currentImage }: { monId: string; current
   const inputRef = useRef<HTMLInputElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [imageSrc, setImageSrc] = useState(currentImage ?? "");
+  const [imgLoaded, setImgLoaded] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleUpload = async (file: File) => {
@@ -26,6 +27,7 @@ export function MonImageUpload({ monId, currentImage }: { monId: string; current
         throw new Error(data.error ?? "Upload failed");
       }
 
+      setImgLoaded(true);
       setImageSrc(`${data.path}?t=${Date.now()}`);
       setStatus("success");
     } catch (err) {
@@ -39,16 +41,21 @@ export function MonImageUpload({ monId, currentImage }: { monId: string; current
     if (file) handleUpload(file);
   };
 
+  const showImage = imageSrc && imgLoaded;
+
   return (
     <div className="mb-4 flex aspect-square max-h-48 w-full items-center justify-center rounded-[var(--radius)] bg-muted relative overflow-hidden">
-      {imageSrc ? (
+      {imageSrc && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={imageSrc}
           alt="Mon sprite"
-          className="h-full w-full object-contain"
+          className={`h-full w-full object-contain ${showImage ? "" : "hidden"}`}
+          onLoad={() => setImgLoaded(true)}
+          onError={() => { setImgLoaded(false); setImageSrc(""); }}
         />
-      ) : (
+      )}
+      {!showImage && (
         <span className="text-xs text-muted-foreground">No image</span>
       )}
 

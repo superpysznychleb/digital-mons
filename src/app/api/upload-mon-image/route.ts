@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 import { writeFile, mkdir } from "fs/promises";
+import { revalidatePath } from "next/cache";
 import { getMonById } from "@/data/mons";
 import { convertToWebp } from "@/lib/convert-to-webp";
 
@@ -37,6 +38,8 @@ export async function POST(request: NextRequest) {
 
   const filename = `${mon.id}.webp`;
   await writeFile(path.join(monsDir, filename), webpBuffer);
+
+  revalidatePath(`/dex/${mon.id}`);
 
   return NextResponse.json({ path: `/mons/${filename}` });
 }
