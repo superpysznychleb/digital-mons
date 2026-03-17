@@ -8,12 +8,15 @@ export function MonImageUpload({ monId, currentImage }: { monId: string; current
   const inputRef = useRef<HTMLInputElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [imageSrc, setImageSrc] = useState(currentImage ?? "");
-  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgVisible, setImgVisible] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
   const handleUpload = async (file: File) => {
     setStatus("uploading");
     setErrorMsg("");
+
+    // Create a local preview immediately so we can show it on success
+    const localPreview = URL.createObjectURL(file);
 
     const formData = new FormData();
     formData.append("file", file);
@@ -24,11 +27,14 @@ export function MonImageUpload({ monId, currentImage }: { monId: string; current
       const data = await res.json();
 
       if (!res.ok) {
+        URL.revokeObjectURL(localPreview);
         throw new Error(data.error ?? "Upload failed");
       }
 
-      setImgLoaded(true);
-      setImageSrc(`${data.path}?t=${Date.now()}`);
+      // Use the local preview as the displayed image — guaranteed to work
+      // without waiting for the server-written file to be servable
+      setImageSrc(localPreview);
+      setImgVisible(true);
       setStatus("success");
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : "Upload failed");
@@ -41,7 +47,7 @@ export function MonImageUpload({ monId, currentImage }: { monId: string; current
     if (file) handleUpload(file);
   };
 
-  const showImage = imageSrc && imgLoaded;
+  const showImage = imageSrc && imgVisible;
 
   return (
     <div className="mb-4 flex aspect-square max-h-48 w-full items-center justify-center rounded-[var(--radius)] bg-muted relative overflow-hidden">
@@ -51,8 +57,8 @@ export function MonImageUpload({ monId, currentImage }: { monId: string; current
           src={imageSrc}
           alt="Mon sprite"
           className={`h-full w-full object-contain ${showImage ? "" : "hidden"}`}
-          onLoad={() => setImgLoaded(true)}
-          onError={() => { setImgLoaded(false); setImageSrc(""); }}
+          onLoad={() => setImgVisible(true)}
+          onError={() => { setImgVisible(false); setImageSrc(""); }}
         />
       )}
       {!showImage && (

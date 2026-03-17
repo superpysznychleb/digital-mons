@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { existsSync } from "fs";
+import path from "path";
 import { ALL_MONS, getMonById, getEvolutionChain } from "@/data/mons";
 import { ElementBadge } from "@/components/element-badge";
 import { RARITY_COLORS, ELEMENT_BORDER } from "@/lib/element-colors";
@@ -53,7 +55,15 @@ export default async function MonDetailPage({ params }: { params: Promise<{ id: 
         )}
       >
         {/* Mon sprite with upload */}
-        <MonImageUpload monId={mon.id} currentImage={mon.image || `/mons/${mon.id}.webp`} />
+        <MonImageUpload
+          monId={mon.id}
+          currentImage={
+            mon.image ||
+            (existsSync(path.join(process.cwd(), "public", "mons", `${mon.id}.webp`))
+              ? `/mons/${mon.id}.webp`
+              : undefined)
+          }
+        />
 
         {/* Name row */}
         <div className="mb-2 flex items-center justify-between">
