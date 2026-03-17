@@ -125,6 +125,16 @@ export default async function MonDetailPage({ params }: { params: Promise<{ id: 
         </div>
       </section>
 
+      {/* Image Prompt */}
+      <section className="mb-6">
+        <h2 className="mb-3 text-lg font-bold">Image Prompt</h2>
+        <div className="rounded-[var(--radius)] border bg-card p-4">
+          <p className="text-xs leading-relaxed text-muted-foreground font-mono break-words">
+            {mon.imagePrompt}
+          </p>
+        </div>
+      </section>
+
       {/* Evolution Chain */}
       {chain.length > 1 && (
         <section className="mb-6">

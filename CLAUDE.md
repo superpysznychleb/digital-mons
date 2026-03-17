@@ -92,13 +92,18 @@ Every mon includes an `imagePrompt` field — a detailed Strampler pixel art gen
 - **Palette**: Each prompt includes an explicit color palette matching the mon's element types
 - **Progression**: Prompts scale in detail and grandeur matching evolution stage — Spark is cute/minimal, Omega is godlike/transcendent
 
-### Current Mon Count: 30
+### Current Mon Count: 60
 
 - **Pyrox Line** (#001-006): Cindlet → Blazpup → Pyrox → Volcanox → Ignirex → Soldracon (Fire → Fire/Earth → Fire/Light)
 - **Aquara Line** (#007-012): Drople → Tidalin → Aquara → Tsunamaw → Abysseon → Leviathos (Water → Water/Shadow → Water/Psychic)
 - **Voltik Line** (#013-018): Zapbit → Voltik → Thundrix → Galvorn → Tempesteel → Thorathon (Lightning → Lightning/Wind → Lightning/Metal → Lightning/Light)
 - **Florae Line** (#019-024): Seedbit → Thornlet → Florae → Vengrove → Blightwood → Yggdracore (Nature → Nature/Poison → Nature/Shadow → Nature/Light)
 - **Glacien Line** (#025-030): Frozzle → Sleetpaw → Glacien → Permafrost → Cryomancer → Absolutzero (Ice → Ice/Wind → Ice/Earth → Ice/Psychic → Ice/Shadow)
+- **Terravex Line** (#031-036): Pebblit → Claypaw → Terravex → Quarrion → Monolithus → Pangaedon (Earth → Earth/Metal → Earth/Fire → Earth/Light)
+- **Cyclonix Line** (#037-042): Zephlet → Gustpaw → Cyclonix → Stormveil → Tempestia → Aetherios (Wind → Wind/Lightning → Wind/Ice → Wind/Psychic → Wind/Light)
+- **Noctrix Line** (#043-048): Gloombit → Duskpaw → Noctrix → Phantasm → Eclipsar → Voidmaw (Shadow → Shadow/Poison → Shadow/Psychic → Shadow/Ice → Shadow/Fire)
+- **Cerebrex Line** (#049-054): Psibit → Mentalin → Cerebrex → Cognivore → Oraclyn → Omnimind (Psychic → Psychic/Light → Psychic/Shadow → Psychic/Metal → Psychic/Light)
+- **Steelvex Line** (#055-060): Cogling → Ironpup → Steelvex → Forgeron → Titanwarden → Mechagodra (Metal → Metal/Fire → Metal/Earth → Metal/Lightning → Metal/Light)
 
 ## Commands
 
